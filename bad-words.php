@@ -9,7 +9,7 @@ $my_string = 'I topi non avevano nipoti';
 
 $bad_word = ($_GET['badWord']);
 
-var_dump (str_replace($bad_word, '***', $my_string));
+$censored_string = str_replace($bad_word, '***', $my_string);
 ?>
 
 
@@ -28,7 +28,13 @@ var_dump (str_replace($bad_word, '***', $my_string));
         <?php echo $my_string?>
     </p>
     <p>
-        la lunghezza della stringa è: <?php echo strlen($my_string)?>
+        La lunghezza della stringa è: <?php echo strlen($my_string)?>
+    </p>
+    <p>
+        <?php echo $censored_string?>
+    </p>
+    <p>
+        La lunghezza della stringa censurata è: <?php echo strlen($censored_string)?>
     </p>
 
 </body>
